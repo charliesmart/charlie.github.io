@@ -5,6 +5,35 @@
     padding: 60px 0
     background-color: $background-color
 
+    .tooltip
+        position: fixed
+        height: auto
+        width: 300px
+        padding: 15px
+        border-radius: 10px
+        background-color: #4c4d50
+        display: none
+        opacity: 0
+
+        &:after, &::after
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -8px
+            content: ''
+            width: 0
+            height: 0
+            border-top: 8px solid #4c4d50
+            border-left: 8px solid transparent
+            border-right: 8px solid transparent
+
+        p
+            color: white
+            font-family: $sans-font
+            font-size: 14px
+            margin: 0
+            text-align: left
+
     h3
         +subheader-text
         color: black
@@ -59,6 +88,12 @@
         position: relative
         margin-bottom: 30px
 
+        &:hover
+            border: 3px solid #f79292
+
+            .skill-inner
+                background-color: #f79292
+
         .skill-inner
             position: absolute
             max-width: 320px
@@ -68,7 +103,7 @@
             border: none
             top: 2px
             left: 2px
-            +transition(width, 0.8s)
+            +transition(width 0.8s ease, background-color 0.2s ease)
 
             p
                 color: white

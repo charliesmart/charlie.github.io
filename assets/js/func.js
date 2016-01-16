@@ -40,7 +40,6 @@ $(document).ready(function(){
     /*--------------------------------------
     Set skills bars and text to proper values
     ---------------------------------------*/
-
     // Cash these values
     var $window = $(window);
     var $skillBars = $('.skill-inner');
@@ -110,4 +109,44 @@ $(document).ready(function(){
 
     //Fire everything above whenever the user scrolls or resizes the window
     $window.on('scroll resize', animate_bar_on_scroll);
+
+
+    /*--------------------------------------
+    Generate skillbar tooltip
+    ---------------------------------------*/
+    //Fires on mouseenter over a skillbar
+    $('.skill-outer').mouseenter(function() {
+
+        //Here, we define a whole lot of variables
+        var $bar = $(this);
+        var text = $bar.attr('info'); //Get text to be inserted from HTML attr
+
+        //Set tooltip text to HTML attr value
+        $('.skills .tooltip').children().text(text);
+
+        var tooltipHeight = parseInt($('.skills .tooltip').css('height').replace('px', '')); //Get height of tooltip
+        var tooltipWidth = parseInt($('.skills .tooltip').css('width').replace('px', '')); //Get width of tooltip
+        var winTop = $(window).scrollTop(); //Get window scrolltop
+
+        var top = $bar.offset().top; //Get distance from skill bar to top of window
+        var left = $bar.offset().left; //Get distance from skillbar to left of window
+        var width = parseInt($bar.css('width').replace('px', '')); //Get width of skillbar
+
+        //Now, we do some calcualtions
+        var midPoint = (left + (width / 2) - (tooltipWidth / 2)); //Use skillbar width, tooltip width, and distance from left of screen to center tooltip over skillbar
+        var topPoint = (top - winTop - tooltipHeight - 10); //Put tooltip slightly over skillbar
+
+        //Actually set the CSS of the tooltip and make it appear
+        $('.skills .tooltip').css('top', topPoint + 'px');
+        $('.skills .tooltip').css('left', midPoint + 'px');
+        $('.skills .tooltip').css('display', 'block');
+        $('.skills .tooltip').animate({opacity: 1}, 200);
+    });
+
+    //Fires on mouseleave from a skillbar
+    $('.skill-outer').mouseleave(function() {
+        $('.skills .tooltip').animate({opacity: 0}, 60, function(){
+            $(this).css('display', 'none'); //After opacity animation, change display to none in callback function
+        });
+    });
 });
