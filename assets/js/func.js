@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
     /*--------------------------------------
-    Function to autosrcoll to point when user
-    clicks nav bar links.
+    Autosrcoll to point when user clicks nav
+    bar links.
     ---------------------------------------*/
     $('.autoscroll').on('click', function(){
         var id = $(this).attr('id'); //Gets id of link
@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
     /*--------------------------------------
-    Function to create the 'sticky nav'
+    Create the 'sticky nav'
     ---------------------------------------*/
     var navTop = $('.nav-main').offset().top; //Finds offset of nav
 
@@ -36,4 +36,19 @@ $(document).ready(function(){
         stickyNav();
     });
 
+
+    /*--------------------------------------
+    Set skills bars and text to proper values
+    ---------------------------------------*/
+    $('.skill-inner').css('width', function(){
+        var percent = $(this).attr('value'); //Get percent value for bar
+        var maxWidthText = $(this).css('maxWidth'); //Get maximum width of inner bar (comes in 'px' format)
+        var maxWidthNum = parseInt(maxWidthText.replace('px', '')) //Convert previous string to useable numbers
+        var width = Math.round(percent / 100 * maxWidthNum); //Calculate final bar length
+        return width.toString() + 'px'; //Return bar length as string with 'px'
+    });
+
+    $('.skill-inner p').text(function(){
+        return $(this).parent().attr('value').toString() + '%';
+    });
 });
