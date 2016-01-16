@@ -1,9 +1,8 @@
 .skills
     width: 100%
     margin: auto
-    min-height: calc(100vh - 60px)
     overflow: hidden
-    padding: 40px 0 60px 0
+    padding: 60px 0
     background-color: $background-color
 
     h3
@@ -28,13 +27,29 @@
             width: 50%
             float: right
 
+    .skill-name
+        width: 100px
+        position: absolute
+        font-size: 12px
+        color: $text-light
+
     .left-bar
         float: left
         margin-left: 80px
 
+        .skill-name
+            text-align: right
+            left: -112px
+            top: -12px
+
     .right-bar
         float: right
         margin-right: 80px
+
+        .skill-name
+            text-align: left
+            right: -112px
+            top: -12px
 
     .skill-outer
         width: 330px
