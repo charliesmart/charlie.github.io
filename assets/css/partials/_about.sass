@@ -3,7 +3,7 @@
     margin: auto
     min-height: calc(100vh - 60px)
     overflow: hidden
-    padding-top: 40px
+    padding: 40px 0 60px 0
     background-color: #42b886
 
     .profile-img
@@ -20,19 +20,11 @@
             height: 100%
 
     h3
-        font-family: $sans-font
         color: white
         margin-top: 18px
         font-size: 20px
-        text-transform: uppercase
-        text-align: center
-        letter-spacing: 2px
+        +subheader-text
 
     p
-        width: 600px
-        margin: auto
         color: white
-        font-size: 16px
-        font-family: $sans-font
-        margin-top: 20px
-        text-align: center
+        +homepage-p
