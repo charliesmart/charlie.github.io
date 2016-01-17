@@ -13,3 +13,39 @@
         +homepage-p
         color: black
         margin: auto
+        margin-top: 22px
+
+    .social-button-wrapper
+        position: relative
+        width: 468px
+        left: 50%
+        margin-left: -234px
+        display: inline-block
+
+        .social-button
+            height: 50px
+            width: 50px
+            margin: 30px 20px 20px 20px
+            border-radius: 100%
+            border: 3px solid #f08080
+            position: relative
+            display: inline-block
+            +transition(all 0.2s linear)
+            cursor: pointer
+
+            &:hover
+                background-color: #f08080
+
+                i
+                    color: $background-color
+
+
+            i
+                position: absolute
+                top: 9px
+                left: 10px
+                color: #f08080
+                font-size: 26px
+
+            .fa-flickr
+                left: 11px
