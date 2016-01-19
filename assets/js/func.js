@@ -15,18 +15,19 @@ $(document).ready(function(){
     /*--------------------------------------
     Create the 'sticky nav'
     ---------------------------------------*/
-    var navTop = $('.nav-main').offset().top; //Finds offset of nav
+    var $nav = $('.header-full nav');
+    var navTop = $nav.offset().top; //Finds offset of nav
 
     $(window).resize(function(){
-        navTop = $('.nav-main').offset().top; //Resets navTop on window resize
+        navTop = $nav.offset().top; //Resets navTop on window resize
     });
 
     var stickyNav = function() {
         var scrollTop = $(window).scrollTop();
         if(scrollTop > navTop) {                 //If scroll is greater than nav offset, make nav sticky
-            $('.nav-main').addClass('sticky');
+            $nav.addClass('sticky');
         } else {
-            $('.nav-main').removeClass('sticky');
+            $nav.removeClass('sticky');
         }
     }
 
