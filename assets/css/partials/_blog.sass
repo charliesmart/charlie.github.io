@@ -2,13 +2,20 @@
     margin-top: 60px
 
 .blog-wrap
-    width: 800px
+    width: 850px
     margin: auto
     margin-top: 100px
+    position: relative
 
     .blog-left
-        width: 180px
-        float: left
+        width: 200px
+        position: absolute
+        left: 0px
+
+        p
+            font-family: $sans-font
+            color: $text-light
+            font-size: 14px
 
         .blog-img
             height: 100px
@@ -22,5 +29,27 @@
                 height: 100%
 
     .blog-right
-        width: 600px
-        float: right
+        position: absolute
+        left: 250px
+        right: 0
+
+        .post-date
+            font-family: $sans-font
+            color: $text-light
+            font-size: 12px
+            font-weight: normal
+
+        p
+            font-family: $sans-font
+            font-size: 17px
+            font-weight: normal
+
+        h3
+            font-family: $serif-font
+            font-size: 28px
+
+            a
+                +transition(color 0.1s ease)
+
+                &:hover
+                    color: $text-accent
