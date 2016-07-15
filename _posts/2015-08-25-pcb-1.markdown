@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Why So Many Schools in Connecticut Probably Have Toxic PCBs – But Aren’t Being Tested"
+short: "PCBs Part One"
+date:   2015-08-25 11:57:53 -0400
+categories: "Visualization"
+publisher: "WNPR"
+url: http://wnpr.org/post/why-so-many-schools-connecticut-probably-have-toxic-pcbs-aren-t-being-tested#stream/0
+excerpt_separator: <!--more-->
+featured-image: '/assets/img/pcb/pcb_chart.png'
+---

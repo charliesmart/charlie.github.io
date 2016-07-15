@@ -1,0 +1,24 @@
+$base-font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$text-color:       #111;
+$background-color: #f4f4f2;
+$brand-color:      #2a7ae2;
+$dark-color:       #262c3a;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Unsorted Packages Cause Delays in UConn Mailrooms"
+short: "Mailroom Chaos"
+date:   2015-11-12 13:57:53 -0400
+categories: Audio
+publisher: "WHUS Radio"
+type: portfolio
+url: http://whus.org/2015/09/17/unsorted-packages-cause-delays-in-uconn-mailrooms/
+excerpt_separator: <!--more-->
+featured-image: '/assets/img/mail/mail.jpg'
+---
