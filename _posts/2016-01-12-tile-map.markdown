@@ -1,0 +1,11 @@
+---
+title:  "D3.js Square Tile Map"
+short: "Square Map"
+date:   2016-01-16 13:57:53 -0400
+categories: Visualization
+publisher: "Class Project"
+type: portfolio
+excerpt_separator: <!--more-->
+link: https://bl.ocks.org/charliesmart/raw/986bb495581582539c42/
+featured-image: '/assets/img/square-tile-map/crime_map_square.png'
+---
