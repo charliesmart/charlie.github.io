@@ -5,7 +5,7 @@ short: "Louisiana Reporting Website"
 date:   2016-05-07 11:57:53 -0400
 categories: "Web Design"
 publisher: "Class Project"
-url: http://louisianaunderwater.uconn.edu/
+link: http://louisianaunderwater.uconn.edu/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/louisiana/louisiana.png'
 ---

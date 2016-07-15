@@ -6,7 +6,7 @@ date:   2016-01-23 13:57:53 -0400
 categories: Audio
 publisher: "WHUS Radio"
 type: portfolio
-url: http://whus.org/category/podcasts/story-of-storrs/
+link: http://whus.org/category/podcasts/story-of-storrs/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/story-of-storrs/storrs_logo.png'
 ---

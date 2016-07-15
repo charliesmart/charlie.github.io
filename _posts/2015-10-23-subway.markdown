@@ -6,7 +6,7 @@ date:   2015-10-23 13:57:53 -0400
 categories: Audio
 publisher: "WHUS Radio"
 type: portfolio
-url: http://whus.org/2015/10/23/following-subway-announcement-pirg-shifts-campaign-message-to-thank-you/
+link: http://whus.org/2015/10/23/following-subway-announcement-pirg-shifts-campaign-message-to-thank-you/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/subway/IMG_9601.jpg'
 ---

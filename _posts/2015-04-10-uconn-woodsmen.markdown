@@ -5,7 +5,7 @@ short: "UConn Woodsmen"
 date:   2015-04-10 13:57:53 -0400
 categories: Video
 publisher: "WHUS Radio"
-url: https://www.youtube.com/watch?v=jCfJyD5-GAQ
+link: https://www.youtube.com/watch?v=jCfJyD5-GAQ
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/woodsmen/woodsmen.png'
 ---

@@ -5,7 +5,7 @@ short: "UConn Power Plant"
 date:   2016-04-18 11:51:53 -0400
 categories: Video
 publisher: "WHUS Radio"
-url: https://www.youtube.com/watch?v=0z0fRp4pbQI
+link: https://www.youtube.com/watch?v=0z0fRp4pbQI
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/cogen/langston.png'
 ---

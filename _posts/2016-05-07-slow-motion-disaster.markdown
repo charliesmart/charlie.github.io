@@ -5,7 +5,7 @@ short: "A Slow Motion Disaster"
 date:   2016-05-07 11:51:53 -0400
 categories: Writing
 publisher: "Class Project"
-url: http://louisianaunderwater.uconn.edu/barrier-islands.html
+link: http://louisianaunderwater.uconn.edu/barrier-islands.html
 excerpt_separator: <!--more-->
 featured-image: 'http://louisianaunderwater.uconn.edu/assets/img/charlie/boat-wide.jpg'
 ---

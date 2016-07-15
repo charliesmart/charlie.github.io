@@ -6,7 +6,7 @@ date:   2015-11-12 13:57:53 -0400
 categories: Writing
 publisher: "WHUS Radio"
 type: portfolio
-url: http://whus.org/2015/11/12/uconn-doctor-aims-to-grow-human-limb-in-15-years/
+link: http://whus.org/2015/11/12/uconn-doctor-aims-to-grow-human-limb-in-15-years/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/limbs/limbs.jpg'
 ---

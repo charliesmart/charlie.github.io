@@ -5,7 +5,7 @@ short: "PCBs Part Two"
 date:   2015-09-20 11:57:53 -0400
 categories: "Visualization"
 publisher: "WNPR"
-url: http://wnpr.org/post/connecticut-schools-and-toxic-pcbs-what-are-health-impacts#stream/0
+link: http://wnpr.org/post/connecticut-schools-and-toxic-pcbs-what-are-health-impacts#stream/0
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/pcb/pcb_person.png'
 ---

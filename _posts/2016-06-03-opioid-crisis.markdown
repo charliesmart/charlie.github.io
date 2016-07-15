@@ -5,7 +5,7 @@ short: "Opioid Crisis"
 date:   2016-06-03 11:57:53 -0400
 categories: "Visualization"
 publisher: "TrendCT"
-url: http://trendct.org/2016/06/03/pace-of-opioid-overdose-deaths-in-connecticut-still-rising/
+link: http://trendct.org/2016/06/03/pace-of-opioid-overdose-deaths-in-connecticut-still-rising/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/opioid/opioids.png'
 ---
