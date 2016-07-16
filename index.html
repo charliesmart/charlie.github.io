@@ -16,7 +16,7 @@ layout: default
         <div id="grid">
         {% for post in site.posts %}
             <div class="post-container {{ post.categories }}">
-                <a href="{{ post.link }}" target="_blank">
+                <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}" target="_blank">
                     <div class="post-img" style="background-image:url({{post.featured-image}})">
                         <div class="img-darken"></div>
                     </div>
