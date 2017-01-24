@@ -8,7 +8,7 @@ publisher: "FiveThirtyEight"
 description: ""
 type: portfolio
 color: '#df8611'
-link:'https://fivethirtyeight.com/features/obama-granted-clemency-unlike-any-other-resident-in-history/'
+link: https://fivethirtyeight.com/features/obama-granted-clemency-unlike-any-other-resident-in-history/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/clemency.png'
 ---
