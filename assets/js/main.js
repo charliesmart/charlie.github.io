@@ -1,11 +1,5 @@
 $(document).ready(function(){
     function resize_posts(){
-        $('.header-card').css('margin-left', function(){
-            return $(this).width() / 2 * -1;
-        }).css('margin-top', function(){
-            return $(this).height() / 2 * -1;
-        });
-
         $('.post-img').css('height', function(){
             return $(this).width();
         });

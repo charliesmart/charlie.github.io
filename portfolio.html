@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% include header.html %}
+<div class="content">
+    <div class="left-bar">
+      <div id="page-header">
+        <h1>Portfolio</h1>
+        <ul id="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/portfolio" id="current-page">Work</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+
+    <div class="right-bar">
+      {% include portfolio.html %}
+    </div>
+</div>
+
+<script>
+  var $document = $(document);
+  var $leftBar = $('.left-bar')
+  $document.ready(function() {
+
+
+  });
+</script>

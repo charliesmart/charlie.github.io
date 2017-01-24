@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Especially Big Data Epsidoe 4: Parsing Panama"
+short: "Parsing Panama"
+date:   2016-11-30 13:57:53 -0400
+categories: Audio
+publisher: "Fathom"
+description: "A tool to compare data between 14 competitive industrial nations. I programmed the site for web and worked primarily on the mobile design and interactions."
+type: portfolio
+color: '#2fab24'
+link: https://fathom.info/ebd/episode-4/
+excerpt_separator: <!--more-->
+featured-image: '/assets/img/ebd.png'
+---
+An episode of Fathom Information Design's podcast, "Especially Big Data." This episode, which I wrote and produced, examines how the team behind the Panama Papers investigation went about parsing the biggest document leak in journalism history.

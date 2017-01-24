@@ -3,39 +3,39 @@ layout: default
 ---
 {% include header.html %}
 <div class="content">
-    <div id="work">
-        <h2>My Work</h2>
-        <p>
-            <a id="all" class="filter">all</a>
-            <a id="Visualization" class="filter">data viz</a>
-            <a id="WebDesign" class="filter">web design</a>
-            <a id="Audio" class="filter">audio</a>
-            <a id="Writing" class="filter">writing</a>
-            <a id="Video" class="filter">video</a>
-        </p>
-        <div id="grid">
-        {% for post in site.posts %}
-            <div class="post-container {{ post.categories }}">
-                <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}" target="_blank">
-                    <div class="post-img" style="background-image:url({{post.featured-image}})">
-                        <div class="img-darken"></div>
-                    </div>
-                    <h3>{{ post.short }}</h3>
-                </a>
-                <h4>{{ post.categories}} &#183; {{ post.publisher }}</h4>
-            </div>
+    <div class="left-bar">
+      <div id="page-header">
+        <h1>Charlie Smart</h1>
+        <ul id="nav">
+          <li>
+            <a href="/" id="current-page">Home</a>
+          </li>
+          <li>
+            <a href="/portfolio">Work</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
 
-
-
-        {% endfor %}
-        </div>
+      <p>
+        I’m a cross-discipline journalist,
+developer and information designer. I enjoy tackling tough problems involving lots of numbers and making them easy to
+understand through good storytelling, software and design.
+      </p>
+      <p>
+        I've worked on a tool to <a href="http://localhost:4000/visualization/2016/09/19/ONA-connect.html">connect
+        people</a> at a journalism conference, a dashboard
+        to examine how America <a href="http://localhost:4000/visualization/2016/10/10/measure.html">stacks up</a> against other
+        countries and stories about <a href="http://localhost:4000/writing/2016/05/07/slow-motion-disaster.html">coastal erosion</a>
+        in Louisiana, Vietnam War <a href="http://localhost:4000/audio/2016/01/23/d3-story-of-storrs.html">protests</a> at UConn, and brownfield <a href="http://localhost:4000/writing/2015/07/28/d3-vacant-no-more.html">restoration</a> in Connecticut.
+      </p>
+      <p>
+        I've had the pleasure of working with numerous organizations, including
+        Fathom Information Design, FiveThirtyEight, WNPR, TrendCT, WHUS,
+        The Lens, and more. I'll be graduating from college in May, 2018 and looking for work.
+      </p>
     </div>
-</div>
 
-<script type="text/javascript" src="/assets/js/vendor/node_modules/jquery.localscroll/node_modules/jquery.scrollto/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="/assets/js/vendor/node_modules/jquery.localscroll/jquery.localScroll.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-       $('#work').localScroll({duration:200});
-    });
-</script>
+</div>

@@ -5,6 +5,8 @@ short: "UConn Power Plant"
 date:   2016-04-18 11:51:53 -0400
 categories: Video
 publisher: "WHUS Radio"
+description: "The man behind UConn's ultra-efficient power."
+color: rgb(119, 120, 221)
 link: https://www.youtube.com/watch?v=0z0fRp4pbQI
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/cogen/langston.png'

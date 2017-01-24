@@ -5,7 +5,9 @@ short: "A Slow Motion Disaster"
 date:   2016-05-07 11:51:53 -0400
 categories: Writing
 publisher: "Class Project"
+description: "What can be done about Louisiana's disappearing coast?"
 link: http://louisianaunderwater.uconn.edu/barrier-islands.html
+color: rgb(228, 150, 119)
 excerpt_separator: <!--more-->
 featured-image: 'http://louisianaunderwater.uconn.edu/assets/img/charlie/boat-wide.jpg'
 ---

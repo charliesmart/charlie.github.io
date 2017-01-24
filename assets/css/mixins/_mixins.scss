@@ -1,8 +1,20 @@
-$base-font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: 'SK Modernist';
+    src: url(../fonts/sk-modernist-regular-webfont.ttf);
+    font-weight: normal;
+}
 
-$text-color:       #111;
-$background-color: #f4f4f2;
-$brand-color:      #2a7ae2;
+@font-face {
+    font-family: 'SK Modernist';
+    src: url(../fonts/sk-modernist-bold-webfont.ttf);
+    font-weight: bold;
+}
+
+$base-font-family: "SK Modernist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$text-color:       #222;
+$background-color: #fbfbfb;
+$brand-color:      #3366cc;
 $dark-color:       #262c3a;
 
 $grey-color:       #828282;

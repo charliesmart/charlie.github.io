@@ -5,7 +5,9 @@ short: "Brownfield Restoration"
 date:   2015-07-28 13:57:53 -0400
 categories: Writing
 publisher: "WNPR Public Radio"
+description: "In-depth reporting on Connecticut brownfield restoration."
 type: portfolio
+color: rgb(49, 110, 221)
 link: http://wnpr.org/post/vacant-no-more-how-connecticut-investing-abandoned-properties#stream/0
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/vacant-no-more/IMG_0543-2.jpg'

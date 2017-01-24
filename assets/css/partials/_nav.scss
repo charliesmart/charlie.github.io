@@ -8,7 +8,7 @@
     h1 {
         float: left;
         color: #aaa;
-        font-family: "Roboto Mono", sans-serif;
+        font-family: $base-font-family;
         font-size: 20px;
         margin: 0;
         margin-left: 20px;
@@ -21,7 +21,8 @@
         margin-right: 15px;
         margin-top: 10px;
         margin-bottom: 10px;
-        font-family: "Roboto Mono", monospace;
+        font-family: $base-font-family;
+        text-transform: uppercase;
         font-weight: lighter;
         background-color: #eee;
         text-decoration: none;

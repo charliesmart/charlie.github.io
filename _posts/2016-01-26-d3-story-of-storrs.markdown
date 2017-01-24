@@ -5,7 +5,9 @@ short: "Story of Storrs"
 date:   2016-01-23 13:57:53 -0400
 categories: Audio
 publisher: "WHUS Radio"
+description: "A podcast on the history of UConn."
 type: portfolio
+color: rgb(112, 16, 164)
 link: http://whus.org/category/podcasts/story-of-storrs/
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/story-of-storrs/storrs_logo.png'

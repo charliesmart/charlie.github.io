@@ -1,119 +1,74 @@
+.portfolio-grid {
+  -webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 2;
+	column-gap: 15px;
+	column-fill: auto;
+}
 
-#work {
-    margin: 0 auto;
-    max-width: 1000px;
-    padding-top: 30px;
+.portfolio-item-wrap {
+  display: inline-block;
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ccc;
 
-    h2 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        margin-left: 5px;
+  img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  a:hover {
+    text-shadow: none;
+    text-decoration: none;
+    background-image: none;
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.95;
     }
 
-    p {
-        margin-left: 5px;
-        margin-bottom: 20px;
-        line-height: 35px;
+    h4 {
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      font-size: 20px;
+      transform: translate(-50%, -50%);
+      letter-spacing: 10px;
+      font-weight: normal;
+      line-height: 31px;
     }
+  }
+}
 
-    a.filter {
-        font-family: "Roboto Mono", monospace;
-        font-weight: lighter;
-        background-color: #eee;
-        text-decoration: none;
-        border-radius: 3px;
-        color: black;
-        padding: 3px 5px;
-        @include transition(all 0.2s ease);
-        cursor: pointer;
-        margin-right: 10px;
 
-        &:hover {
-            background-color: #42b886;
-            color: white;
-        }
-    }
 
-    a {
-        text-decoration: none;
-    }
-
-    .post-container {
-        width: 25%;
-        float: left;
-        padding: 5px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-
-        &:nth-child(4n+1) {
-            clear: left;
-        }
-
-        a:hover .img-darken {
-            opacity: 0.4;
-        }
-
-        a:hover h3 {
-            text-decoration: underline;
-        }
-
-        .post-img {
-            width: 100%;
-            background-image: url(/assets/img/woodsmen/woodsmen.png);
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-
-            .img-darken {
-                width: 100%;
-                height: 100%;
-                background-color: white;
-                opacity: 0;
-                @include transition(opacity 0.2s ease);
-            }
-
-        }
-
-        h3 {
-            font-family: 'Roboto';
-            color: black;
-            font-size: 14px;
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 0px;
-        }
-
-        h4 {
-            font-family: 'Roboto Mono';
-            color: black;
-            font-size: 12px;
-            font-weight: normal;
-            text-align: center;
-            margin-top: 0;
-        }
-
-        .post-image {
-            width: 50%;
-            height: 100%;
-        }
-    }
-
+.grid-sizer {
+  width: 48%;
 }
 
 @media (max-width: 800px) and (min-width: 500px) {
-    #work .post-container {
-        width: 33.33%;
 
-        &:nth-child(4n+1) {
-            clear: inherit;
-        }
-
-        &:nth-child(3n+1) {
-            clear: left;
-        }
-    }
 }
 
 @media (max-width: 499px) {
@@ -128,4 +83,76 @@
             clear: left;
         }
     }
+}
+
+.portfolio-item {
+  position: fixed;
+  top: 0;
+  left: 650px;
+  right: 0;
+  height: 100vh;
+  padding: 0 100px 0 0;
+  display: none;
+  background-color: $background-color;
+  opacity: 0;
+
+  .close-item {
+    color: #888;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .item-content {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(0, -50%);
+
+    h2 {
+      color: #333;
+    }
+
+
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid #aaa;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 850px) {
+  .portfolio-item-wrap .portfolio-overlay h4 {
+    font-size: 12px;
+    letter-spacing: 5px;
+    line-height: 20px;
+  }
+
+  .portfolio-item {
+    left: 500px;
+  }
+}
+
+@media (max-width: 850px) {
+  .portfolio-item {
+    left: 0;
+    overflow-y: scroll;
+  }
 }
