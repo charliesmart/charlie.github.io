@@ -8,7 +8,7 @@ publisher: "Fathom"
 description: "A tool to compare data between 14 competitive industrial nations. I programmed the site for web and worked primarily on the mobile design and interactions."
 type: portfolio
 color: '#1188df'
-link: measure.fathom.info
+link: http://measure.fathom.info
 excerpt_separator: <!--more-->
 featured-image: '/assets/img/measure.png'
 ---
