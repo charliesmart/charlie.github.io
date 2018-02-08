@@ -1,40 +1,20 @@
-.main-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-
-    h1 {
-        float: left;
-        color: #aaa;
-        font-family: $base-font-family;
-        font-size: 20px;
-        margin: 0;
-        margin-left: 20px;
-        font-weight: normal;
-
+nav {
+  text-align: right;
+  
+  p {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: $brand-color;
     }
-
-    a {
-        float: right;
-        margin-right: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-family: $base-font-family;
-        text-transform: uppercase;
-        font-weight: lighter;
-        background-color: #eee;
-        text-decoration: none;
-        border-radius: 3px;
-        color: black;
-        padding: 3px 5px;
-        @include transition(all 0.2s ease);
-
-        &:hover {
-            background-color: #42b886;
-            color: white;
-        }
+    
+    &.selected {
+      font-weight: bold;
     }
-
+  }
 }

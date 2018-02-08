@@ -3,12 +3,43 @@
   height: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 .right-bar {
-  position: static;
+  position: absolute;
   margin: 0;
-  width: 100%;
+  left: 50%;
+  top: 40%;
+  width: 35%;
   margin: auto;
   max-width: 600px;
+  padding-bottom: 50px;
+  
+  div {
+    display: none;
+    
+    &.show {
+      display: block;
+    }
+  }
+  
+  .contact {
+    p {
+      margin-bottom: 0;
+    }
+  }
+  
+  .work p:first-child {
+    text-indent: -29px;
+
+  }
+  
+  p {
+    padding-left: 24px;
+  
+  }
 }
 
 .left-bar.frozen {
@@ -18,19 +49,22 @@
 }
 
 .left-bar {
-  position: static;
+  position: fixed;
+  font-size: 25px;
   margin: 0;
-  width: 100%;
+  width: 40%;
+  right: 50%;
+  top: 40%;
   margin: auto;
   max-width: 600px;
-  padding: 15px;
-  padding-top: 40px;
+  padding-right: 20px;
 
-
-
-  .title-offset {
+  .name {
+    font-family: $serif;
     margin-left: 168px;
-    margin-bottom: 40px;
+    margin-top: -32px;
+    text-align: right;
+    margin-bottom: -4px;
   }
 }
 

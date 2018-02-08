@@ -1,16 +1,10 @@
-//
-
-
-@charset "utf-8";
-
-@import
-    "mixins/mixins",
-    "partials/base",
-    "partials/home",
-    "partials/nav",
-    "partials/reset",
-    "partials/header",
-    "partials/portfolio",
-    "partials/hip-hop",
-    "partials/about",
-    "partials/posts";
+@import "mixins/mixins";
+@import "partials/base";
+@import "partials/home";
+@import "partials/nav";
+@import "partials/reset";
+@import "partials/header";
+@import "partials/portfolio";
+@import "partials/hip-hop";
+@import "partials/about";
+@import "partials/posts";

@@ -10,11 +10,12 @@
     font-weight: bold;
 }
 
-$base-font-family: "SK Modernist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans: "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: 'adobe-caslon-pro', serif;
 
-$text-color:       #222;
-$background-color: #fbfbfb;
-$brand-color:      #3366cc;
+$text-color:       blue;
+$background-color: #f4eddd;
+$brand-color:      #ed562e;
 $dark-color:       #262c3a;
 
 $grey-color:       #828282;
