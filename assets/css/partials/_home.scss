@@ -52,16 +52,14 @@
   position: fixed;
   font-size: 25px;
   margin: 0;
-  width: 40%;
   right: 50%;
   top: 40%;
   margin: auto;
-  max-width: 600px;
+  max-width: 800px;
   padding-right: 20px;
 
   .name {
     font-family: $serif;
-    margin-left: 168px;
     margin-top: -32px;
     text-align: right;
     margin-bottom: -4px;
@@ -103,8 +101,8 @@
 
   .right-bar {
     position: static;
-    margin: 0;
     width: 100%;
     padding: 15px;
+    margin: auto;
   }
 }
