@@ -93,6 +93,17 @@ h3 {
     text-align: right;
     margin-bottom: -4px; }
 
+.portfolio-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  transform: translate(-50%, -50%);
+  width: 300px; }
+
+.work {
+  z-index: 999; }
+
 @media (max-width: 850px) {
   .left-bar {
     position: static;

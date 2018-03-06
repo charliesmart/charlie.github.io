@@ -6,4 +6,14 @@ $(document).ready(function(){
     $('.show').removeClass('show');
     $('.' + this.innerText).addClass('show');
   })
+  
+  $('.work a').on('mouseenter', function(e) {
+    var id = this.dataset.img;
+    $('#' + id)
+      .css('display', 'block')
+      .css('left', e.clientX + 'px')
+      .css('top', e.clientY + 'px');
+  }).on('mouseleave', function() {
+    $('.portfolio-img').css('display', 'none');
+  })
 })
