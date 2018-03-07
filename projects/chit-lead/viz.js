@@ -1,5 +1,5 @@
 var width = d3.select('#chart').node().getBoundingClientRect().width;
-var margin = {top: 15, right: 20, bottom: 20, left: 65};
+var margin = {top: 15, right: 30, bottom: 20, left: 65};
 width = width - margin.left - margin.right;
 var height = 400 - margin.left - margin.right;
 
@@ -40,7 +40,8 @@ var xAxis,
   yAxis,
   xAxisGroup,
   yAxisGroup,
-  stateLine;
+  stateLine,
+  stateAvgLabel;
 
 var voronoi;
 
@@ -48,6 +49,8 @@ var data, towns;
 
 var highlightFill = 'red',
   normalFill = 'black';
+  
+var searched = false;
 
 function mouseMoveHandler() {
   const [mx, my] = d3.mouse(this);
@@ -117,7 +120,17 @@ d3.csv('data.csv', function(d) {
     .attr('x1', 0)
     .attr('x2', width)
     .attr('y1', height)
-    .attr('y2', y(xMax * 0.0288));
+    .attr('y2', y(xMax * multipliers.num_5));
+  
+  stateAvgLabel = g.append('text')
+    .attr('class', 'state-label')
+    .style('text-anchor', 'end')
+    .attr('x', x(xMax) + 5)
+    .attr('y', function() {
+      return y(xMax * multipliers.num_5) + 5;
+    })
+    .text('STATE AVG');
+    
     
   g.append('text')
     .append("textPath")
@@ -182,6 +195,7 @@ function searchTown(town) {
     .each(function(d) {
       if (d.town === town) {
         selectDot(d);
+        searched = true;
       }
     });
 }
@@ -189,6 +203,7 @@ function searchTown(town) {
 function selectDot(d) {
   var chartOffset = svg.node().getBoundingClientRect();
   if (!!d) {
+    searched = false;
     d3.select('#tooltip h4').text(d.town);
     d3.select('#tested-num').text(d.num_tested);
     d3.select('#found-num').text(d[currentSelection]);
@@ -216,8 +231,10 @@ function selectDot(d) {
       .attr('cx', x(d.num_tested))
       .attr('cy', y(d[currentSelection]));
   } else {
-    selectCircle.style('display', 'none');
-    $tooltip.style('display', 'none');
+    if (!searched) {
+      selectCircle.style('display', 'none');
+      $tooltip.style('display', 'none');
+    }
   }
 
 }
@@ -265,6 +282,13 @@ $buttons.on('click', function() {
       .x(d => x(d.num_tested))
       .y(d => y(d[currentSelection]))
       .size([width, height])(data);
+      
+    stateAvgLabel.transition()
+      .duration(300)
+      .attr('x', x(xMax) + 5)
+      .attr('y', function() {
+        return y(xMax * multipliers[currentSelection]) + 5;
+      })
 
     stateLine.transition()
       .duration(300)
@@ -289,6 +313,10 @@ function resize() {
   svg.attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.left + margin.right);
   
+    var xMax = d3.max(data.map(function(e) {
+      return +e.num_tested;
+    }))
+  
   x.range([0, width]);
   
   voronoi = d3.voronoi()
@@ -307,6 +335,11 @@ function resize() {
   yAxis.tickSize(-width)
     .tickSizeOuter(0);
     
+  stateAvgLabel.attr('x', x(xMax) + 5)
+    .attr('y', function() {
+      return y(xMax * multipliers[currentSelection]) + 5;
+    })
+  
   d3.select('.axis.x')
       .call(xAxis);
   
