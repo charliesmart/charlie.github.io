@@ -286,6 +286,9 @@ $buttons.on('click', function() {
 function resize() {
   width = Math.min(768, +window.innerWidth) - margin.left - margin.right;
   
+  svg.attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.left + margin.right);
+  
   x.range([0, width]);
   
   voronoi = d3.voronoi()
@@ -293,7 +296,10 @@ function resize() {
     .y(d => y(d[currentSelection]))
     .size([width, height])(data);
 
+  var numTicks = width > 500 ? 10 : 4;
+
   xAxis = d3.axisBottom(x)
+    .ticks(numTicks)
     .tickSize(-height)
     .tickSizeOuter(0)
     .tickPadding(10);
