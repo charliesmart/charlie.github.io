@@ -223,14 +223,16 @@ margin-left: 55px;
     width: 70vw;
   }
   
+  #search-wrap {
+    margin-left: 0;
+  }
+  
   .hed, .dek {
     margin-left: 0;
   }
   
-  
-  
   .toggle-buttons {
-    margin-left: 55px;
+    margin-left: 0;
     margin-top: 15px;
     margin-bottom: 15px;
   }
