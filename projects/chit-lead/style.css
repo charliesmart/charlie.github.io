@@ -223,6 +223,12 @@ margin-left: 55px;
     width: 70vw;
   }
   
+  .hed, .dek {
+    margin-left: 0;
+  }
+  
+  
+  
   .toggle-buttons {
     margin-left: 55px;
     margin-top: 15px;
