@@ -41,6 +41,7 @@
 margin-bottom: 5px;
 font-family: 'Georgia';
 font-weight: bold;
+margin-left: 55px;
 }
 
 .dek {
@@ -68,7 +69,7 @@ font-weight: bold;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   padding: 5px;
   outline: none;
-  min-width: 300px;
+  width: 300px;
 }
 
 .tt-hint {
@@ -203,4 +204,28 @@ font-weight: bold;
   margin: 0;
   border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
+}
+
+@media screen and (max-width: 620px) {
+  #town-search {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .hed {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  #town-search {
+    width: 70vw;
+  }
+  
+  .toggle-buttons {
+    margin-left: 55px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }

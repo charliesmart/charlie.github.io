@@ -113,10 +113,16 @@ d3.csv('data.csv', function(d) {
     
   stateLine = g.append('line')
     .attr('class', 'state-line')
+    .attr('id', 'text-path')
     .attr('x1', 0)
     .attr('x2', width)
     .attr('y1', height)
     .attr('y2', y(xMax * 0.0288));
+    
+  g.append('text')
+    .append("textPath")
+    .attr("xlink:href", "#text-path")
+    .text("STATE AVERAGE");
 
   g.selectAll('.town-dot')
     .data(d)
