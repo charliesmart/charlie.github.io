@@ -231,7 +231,7 @@ margin-left: 55px;
   paint-order: stroke;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 624px) {
   #town-search {
     width: 200px;
   }
