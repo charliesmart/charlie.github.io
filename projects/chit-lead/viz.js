@@ -1,5 +1,5 @@
 var width = d3.select('#chart').node().getBoundingClientRect().width;
-var margin = {top: 15, right: 30, bottom: 20, left: 65};
+var margin = {top: 15, right: 30, bottom: 55, left: 65};
 width = width - margin.left - margin.right;
 var height = 400 - margin.left - margin.right;
 
@@ -20,10 +20,9 @@ function colorScale(x, y) {
   return d3.interpolateRdYlGn(t);
 }
 
-var svg = d3.select('#chart')
-  .append('svg')
+var svg = d3.select('#chart_svg')
   .attr('width', width + margin.left + margin.right)
-  .attr('height', height + margin.left + margin.right);
+  .attr('height', height + margin.bottom + margin.top);
 
 var g = svg.append('g')
   .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
@@ -169,9 +168,9 @@ d3.csv('data.csv', function(d) {
     
   svg.append("text")
       .attr('class', 'axis-label x')
-      .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top + 45) + ")")
+      .attr("transform", "translate(" + ((width/2) + 20) + " ," + (height + margin.top + 45) + ")")
       .style("text-anchor", "middle")
-      .text("Num. Children Tested for Lead");
+      .text("Number of children tested for lead");
   
   svg.append("text")
       .attr('class', 'axis-label y')
@@ -180,7 +179,7 @@ d3.csv('data.csv', function(d) {
       .attr("x", 0 - ((height / 2) + 25))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .html("Num. Children With 5 &#181;g/dL of Lead");
+      .html("Num. children with 5 &#181;g/dL of lead or more");
 })
 
 var $buttons = d3.selectAll('.button');
@@ -245,22 +244,21 @@ $buttons.on('click', function() {
     ga('send', 'event', 'interaction', 'toggle', currentSelection);
     
     d3.select('.axis-label.y').html(function() {
-      var text = 'Num. Children With  '
+      var text = 'Num. children with '
       if (currentSelection == 'num_0_4') {
-        text += '0-4 &#181;g/dL';
+        text += '0-4 &#181;g/dL of lead';
       } else if (currentSelection == 'num_5') {
-        text += '>5 &#181;g/dL';
+        text += '5 &#181;g/dL of lead or more';
       } else if (currentSelection == 'num_10') {
-        text += '>10 &#181;g/dL';
+        text += '10 &#181;g/dL of lead or more';
       } else if (currentSelection == 'num_15') {
-        text += '>15 &#181;g/dL';
+        text += '15 &#181;g/dL of lead or more';
       } else if (currentSelection == 'num_20') {
-        text += '>20 &#181;g/dL';
+        text += '20 &#181;g/dL of lead or more';
       } else {
         text += ''
       }
-      
-      return text += ' of Lead';
+      return text;
     })
     $buttons.classed('active', function() {
       return currentSelection === d3.select(this).attr('id');

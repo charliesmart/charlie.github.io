@@ -206,6 +206,23 @@ margin-left: 55px;
   padding-bottom: 5px;
 }
 
+.footer {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #bbb;
+}
+
+.source {
+  float: left;
+}
+
+.credit {
+  float: right;
+}
+
 .state-label {
   font-family: 'Helvetica';
   font-size: 12px;
