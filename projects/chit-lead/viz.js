@@ -1,5 +1,5 @@
 var width = d3.select('#chart').node().getBoundingClientRect().width;
-var margin = {top: 15, right: 30, bottom: 55, left: 65};
+var margin = {top: 15, right: 30, bottom: 53, left: 65};
 width = width - margin.left - margin.right;
 var height = 400 - margin.left - margin.right;
 
@@ -180,6 +180,8 @@ d3.csv('data.csv', function(d) {
       .attr("dy", "1em")
       .style("text-anchor", "middle")
       .html("Num. children with 5 &#181;g/dL of lead or more");
+
+  resize();
 })
 
 var $buttons = d3.selectAll('.button');
@@ -307,6 +309,10 @@ $buttons.on('click', function() {
   
 function resize() {
   width = Math.min(768, +window.innerWidth) - margin.left - margin.right;
+  
+  d3.select('.source').text(function() {
+    return width > 500 ? 'SOURCE: CONNECTICUT DEPARTMENT OF PUBLIC HEALTH' : 'SOURCE: CT DEPT. OF PUBLIC HEALTH'
+  }) 
   
   svg.attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.left + margin.right);
