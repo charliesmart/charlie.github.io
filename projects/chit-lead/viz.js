@@ -374,7 +374,7 @@ function resize() {
   stateLine.attr('x2', width);
   
   d3.select('.axis-label.x')
-  .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top + 45) + ")")
+  .attr("transform", "translate(" + ((width/2) + 40) + " ," + (height + margin.top + 45) + ")")
 }
 
 window.onresize = resize;
