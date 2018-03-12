@@ -1,7 +1,7 @@
 var width = d3.select('#chart').node().getBoundingClientRect().width;
-var margin = {top: 15, right: 30, bottom: 53, left: 65};
+var margin = {top: 15, right: 30, bottom: 70, left: 65};
 width = width - margin.left - margin.right;
-var height = 400 - margin.left - margin.right;
+var height = 400 - margin.top - margin.bottom;
 
 var multipliers = {
   'num_0_4': 0.9712,
@@ -309,6 +309,14 @@ $buttons.on('click', function() {
   
 function resize() {
   width = Math.min(768, +window.innerWidth) - margin.left - margin.right;
+
+  if (width > 500) {
+    height = 400 - margin.top - margin.bottom;
+  } else {
+    height = 350 - margin.top - margin.bottom;
+  }
+  
+  xAxis.tickSize(-height);
   
   d3.select('.source').text(function() {
     return width > 500 ? 'SOURCE: CONNECTICUT DEPARTMENT OF PUBLIC HEALTH' : 'SOURCE: CT DEPT. OF PUBLIC HEALTH'
@@ -322,6 +330,7 @@ function resize() {
     }))
   
   x.range([0, width]);
+  y.range([height, 0])
   
   voronoi = d3.voronoi()
     .x(d => x(d.num_tested))
@@ -329,6 +338,8 @@ function resize() {
     .size([width, height])(data);
 
   var numTicks = width > 500 ? 10 : 4;
+
+  stateLine.attr('y1', height)
 
   xAxis = d3.axisBottom(x)
     .ticks(numTicks)
@@ -338,6 +349,8 @@ function resize() {
     
   yAxis.tickSize(-width)
     .tickSizeOuter(0);
+    
+  xAxisGroup.attr('transform', 'translate(0, ' + height + ')');
     
   stateAvgLabel.attr('x', x(xMax) + 5)
     .attr('y', function() {
@@ -353,6 +366,9 @@ function resize() {
   g.selectAll('.town-dot')
     .attr('cx', function(d) {
       return x(+d.num_tested);
+    })
+    .attr('cy', function(d) {
+      return y(+d[currentSelection]);
     })
     
   stateLine.attr('x2', width);
