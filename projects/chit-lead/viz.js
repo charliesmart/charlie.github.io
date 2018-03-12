@@ -224,7 +224,17 @@ function selectDot(d) {
       }
     })
     
-    $tooltip.style('left', (x(d.num_tested) - 78) + 'px')
+    $tooltip.style('left', function() {
+      val = x(d.num_tested);
+      
+      if (val + 160 > width) {
+        return (width - 160) + 'px';
+      } else if (val - 78 < 0) {
+        return 0;
+      } else {
+        return (val - 78) + 'px';
+      }
+    })
       .style('top', y(d[currentSelection]) + chartOffset.top + 'px')
       .style('display', 'block')
       
