@@ -212,13 +212,13 @@ function selectDot(d) {
       if (currentSelection == 'num_0_4') {
         return '0-4 &#181;g/dL';
       } else if (currentSelection == 'num_5') {
-        return 'more than 5 &#181;g/dL';
+        return '5 &#181;g/dL or more.';
       } else if (currentSelection == 'num_10') {
-        return 'more than 10 &#181;g/dL';
+        return '10 &#181;g/dL or more';
       } else if (currentSelection == 'num_15') {
-        return 'more than 15 &#181;g/dL';
+        return '15 &#181;g/dL or more';
       } else if (currentSelection == 'num_20') {
-        return 'more than 20 &#181;g/dL';
+        return '20 &#181;g/dL or more';
       } else {
         return ''
       }
