@@ -224,7 +224,7 @@ function selectDot(d) {
       }
     })
     
-    $tooltip.style('left', x(d.num_tested) + (chartOffset.left - margin.left - margin.right) + 'px')
+    $tooltip.style('left', (x(d.num_tested) - 78) + 'px')
       .style('top', y(d[currentSelection]) + chartOffset.top + 'px')
       .style('display', 'block')
       
@@ -310,7 +310,7 @@ $buttons.on('click', function() {
 function resize() {
   width = Math.min(768, +window.innerWidth) - margin.left - margin.right;
 
-  if (width > 500) {
+  if (width > 624) {
     height = 400 - margin.top - margin.bottom;
   } else {
     height = 350 - margin.top - margin.bottom;
