@@ -212,7 +212,7 @@ function selectDot(d) {
       if (currentSelection == 'num_0_4') {
         return '0-4 &#181;g/dL';
       } else if (currentSelection == 'num_5') {
-        return '5 &#181;g/dL or more.';
+        return '5 &#181;g/dL or more';
       } else if (currentSelection == 'num_10') {
         return '10 &#181;g/dL or more';
       } else if (currentSelection == 'num_15') {
