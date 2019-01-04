@@ -1,0 +1,160 @@
+@import '../mixins/variables.less';
+
+.window {
+  position: absolute;
+  border: 2px solid @blue;
+  background-color: white;
+  .shadow(@blue);
+
+  &--growing {
+    transition: all 0.2s ease;
+  }
+}
+
+.windowContents {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  padding: 20px;
+  padding-top: 25px;
+  overflow-y: auto;
+
+  &__wrap {
+    margin: auto;
+    max-width: 550px;
+  }
+
+  .title {
+    font-family: @sans;
+    font-weight: 800;
+    color: @blue;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .jump {
+    padding: 10px;
+    border: 2px solid @blue;
+    padding: 10px;
+    border: 2px solid #345082;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      transition: width 0.2s ease;
+      left: 10px;
+      height: 2px;
+      top: 50%;
+      margin-top: 8px;
+      background-color: @blue;
+    }
+
+    &:hover {
+      .shadow(@blue, 5px);
+
+      &:after {
+        width: calc(100% - 20px);
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: @blue;
+    font-weight: 600;
+  }
+
+  hr {
+    margin: 30px 0;
+    border: 1px solid @blue_light;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: @blue;
+  }
+
+  p {
+    font-family: @sans;
+    color: @blue;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-family: @sans;
+      padding: 8px 0;
+      border-bottom: 1px solid @blue_light;
+      color: @blue_medium;
+
+      p {
+        color: @blue_medium;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.actionBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  padding: 7px;
+  border-bottom: 2px solid @blue;
+  background-color: @blue_light;
+
+}
+
+.button {
+  width: 14px;
+  height: 14px;
+  border: 3px solid black;
+  border-radius: 20px;
+  float: left;
+  margin-right: 4px;
+  cursor: pointer;
+
+  &--close {
+    border-color: @red;
+    background-color: @red_light;
+  }
+
+  &--minimize {
+    border-color: @yellow;
+    background-color: @yellow_light;
+  }
+
+  &--maximize {
+    border-color: @green;
+    background-color: @green_light;
+  }
+}
+
+.mobilePost {
+  padding: 30px 0; 
+  border-bottom: 1px solid @blue_light;
+}

@@ -1,0 +1,48 @@
+@import 'mixins/reset.less';
+@import 'mixins/variables.less';
+@import 'components/Window.less';
+@import 'components/Menu.less';
+
+::selection {
+  color: @blue;
+  background: @blue_light;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: @blue_light;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @blue_medium;
+}
+
+#main {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid @blue;
+  overflow: hidden;
+}
+
+.name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: @sans;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-align: center;
+  color: @blue;
+  cursor: default;
+  user-select: none;
+  font-size: 60px;
+  z-index: -10;
+}

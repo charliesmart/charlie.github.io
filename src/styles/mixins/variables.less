@@ -1,0 +1,31 @@
+@import './fonts.less';
+
+// Colors
+@blue: #345082;
+@blue_dark: #2E394D;
+@blue_medium: #A9B5CD;
+@blue_light: #E7EAF1;
+
+@red: #E83C44;
+@red_light: #F7BCBF;
+
+@yellow: #F7CE00;
+@yellow_light: #FBEDA9;
+
+@green: #5EB919;
+@green_light: #C6F3A3;
+
+.shadow(@color, @offset: 10px) {
+  -webkit-box-shadow: -@offset @offset 0px 0px rgba(@color,0.2);
+  -moz-box-shadow: -@offset @offset 0px 0px rgba(@color,0.2);
+  box-shadow: -@offset @offset 0px 0px rgba(@color,0.2);
+}
+
+.shadow--active(@color) {
+  -webkit-box-shadow: -10px 10px 10px 10px rgba(@color,0.2);
+  -moz-box-shadow: -10px 10px 10px 10px rgba(@color,0.2);
+  box-shadow: -10px 10px 10px 10px rgba(@color,0.2);
+}
+
+@sans: 'Aileron', sans-serif;
+@display: 'Butler', monospace;
