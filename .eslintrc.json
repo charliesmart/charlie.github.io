@@ -17,6 +17,7 @@
       "es6": true
   },
   "rules": {
+    "react/jsx-no-target-blank": "off",
     "no-console": "off",
     "eqeqeq": "warn",
     "no-magic-numbers": ["warn", {"ignore": [1, -1, 0, 2]}],
