@@ -20,7 +20,7 @@ module.exports = {
    * format. You probably won't ever need or want to mess with this.
    */
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].bundle.js',
   },
 
@@ -97,7 +97,7 @@ module.exports = {
    */
   plugins: [
 
-    // Copies /assets directory as-is into /dist
+    // Copies /assets directory as-is into /docs
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'src/assets'),

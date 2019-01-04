@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = merge(common, {
   mode: 'production',
   plugins: [
-    // Cleans out the /dist directory before a build
-    new CleanWebpackPlugin('dist', {})
+    // Cleans out the /docs directory before a build
+    new CleanWebpackPlugin('docs', {})
   ]
 })

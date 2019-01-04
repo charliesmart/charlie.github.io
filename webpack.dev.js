@@ -11,7 +11,7 @@ module.exports = merge(common, {
    * you can delete the stats: 'minimal' line
    */
   devServer: {
-      contentBase: path.join(__dirname, 'dist'),
+      contentBase: path.join(__dirname, 'docs'),
       port: 8000,
       stats: 'minimal',
       historyApiFallback: true
