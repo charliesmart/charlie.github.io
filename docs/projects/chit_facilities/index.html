@@ -81,7 +81,7 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
         'd_2016': 1
       }
       var data;
-      d3.csv('assets/data/fees.csv', function(d) {
+      d3.csv('../assets/data/fees.csv', function(d) {
         data = d;
         for (var i = 0; i < d.length; i++) {
           var row = d3.select('tbody').append('tr');
