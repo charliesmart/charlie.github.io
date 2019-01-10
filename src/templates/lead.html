@@ -331,7 +331,7 @@
       var width=d3.select('#chart').node().getBoundingClientRect().width;var margin={top:15,right:30,bottom:70,left:65};width=width-margin.left-margin.right;var height=400-margin.top-margin.bottom;var multipliers={'num_0_4':0.9712,'num_5':0.0288,'num_10':0.007,'num_15':0.003,'num_20':0.002}
 var currentSelection='num_5';function colorScale(x,y){var expectedY=x*multipliers[currentSelection];var dif=y-expectedY;var t=Math.min(Math.max((dif+80)/(160),0),1);return d3.interpolateRdYlGn(t)}
 var svg=d3.select('#chart_svg').attr('width',width+margin.left+margin.right).attr('height',height+margin.bottom+margin.top);var g=svg.append('g').attr('transform','translate('+margin.left+','+margin.top+')');var x=d3.scaleLinear().range([0,width]);var y=d3.scaleLinear().range([height,0]);var selectCircle;var xAxis,yAxis,xAxisGroup,yAxisGroup,stateLine,stateAvgLabel;var voronoi;var data,towns;var highlightFill='red',normalFill='black';var searched=!1;function mouseMoveHandler(){const[mx,my]=d3.mouse(this);const site=voronoi.find(mx,my,15);selectDot(site&&site.data)}
-d3.csv('../../assets/data/lead.csv',function(d){data=d;towns=d.map(function(e){return e.town})
+d3.csv('/../assets/data/lead.csv',function(d){data=d;towns=d.map(function(e){return e.town})
 $('#search-wrap #town-search').typeahead({hint:!0,highlight:!0,minLength:1},{name:'towns',source:substringMatcher(towns)});$('#search-wrap #town-search').bind('typeahead:select',function(ev,town){searchTown(town)})
 var xMax=d3.max(d.map(function(e){return+e.num_tested}))
 var yMax=d3.max(d.map(function(e){return+e[currentSelection]}))
