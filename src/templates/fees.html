@@ -15,10 +15,10 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
     <style>
       @font-face {
         font-family: 'icomoon';
-        src:  url('assets/fonts/icomoon.eot?iie1ti');
-        src:  url('assets/fonts/icomoon.eot?iie1ti#iefix') format('embedded-opentype'),
-          url('assets/fonts/icomoon.ttf?iie1ti') format('truetype'),
-          url('assets/fonts/icomoon.woff?iie1ti') format('woff');
+        src:  url('../../assets/fonts/icomoon.eot?iie1ti');
+        src:  url('../../assets/fonts/icomoon.eot?iie1ti#iefix') format('embedded-opentype'),
+          url('../../assets/fonts/icomoon.ttf?iie1ti') format('truetype'),
+          url('../../assets/fonts/icomoon.woff?iie1ti') format('woff');
         font-weight: normal;
         font-style: normal;
       }
@@ -121,7 +121,7 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
         'd_2016': 1
       }
       var data;
-      d3.csv('assets/data/fees.csv', function(d) {
+      d3.csv('../../assets/data/fees.csv', function(d) {
         data = d;
         for (var i = 0; i < d.length; i++) {
           var row = d3.select('tbody').append('tr');
