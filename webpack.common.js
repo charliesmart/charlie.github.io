@@ -13,6 +13,7 @@ module.exports = {
    */
   entry: {
     main: path.resolve(__dirname, 'src/js/index.js'),
+    other: path.resolve(__dirname, 'src/js/other.js'),
   },
 
   /**
@@ -116,6 +117,20 @@ module.exports = {
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
       chunks: ['main'],
+      hash: true,
+    }),
+
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/templates/lead.html'),
+      filename: 'projects/chit-lead/index.html',
+      chunks: [''],
+      hash: true,
+    }),
+
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/templates/fees.html'),
+      filename: 'projects/chit_fees/index.html',
+      chunks: [''],
       hash: true,
     })
   ]

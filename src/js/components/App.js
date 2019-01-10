@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import WindowManager from './WindowManager';
 import Mobile from './Mobile';
+import { Route, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 const MOBILE_CUTOFF = 550;
 
@@ -27,9 +28,21 @@ class App extends Component {
   }
 
   render() {
-    return this.state.isMobile
-      ? <Mobile />
-      : <WindowManager />;
+    return (
+      <Router>
+        <Switch>
+          <Route path='/projects/chit_facilities' render={() => {window.location.href="fees.html"}}/>
+          <Route path='/projects/chit_lead' render={() => {window.location.href="lead.html"}}/>
+          <Route path='/'>
+            {
+              this.state.isMobile
+                ? <Mobile />
+                : <WindowManager />
+            }
+          </Route>
+        </Switch>
+      </Router>
+    )
   }
 }
 
