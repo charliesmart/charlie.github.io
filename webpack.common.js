@@ -129,7 +129,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/fees.html'),
-      filename: 'projects/chit_fees/index.html',
+      filename: 'projects/chit_facilities/index.html',
       chunks: [''],
       hash: true,
     })
