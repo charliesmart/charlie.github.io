@@ -1,20 +1,8 @@
-@font-face {
-    font-family: 'SK Modernist';
-    src: url(../fonts/sk-modernist-regular-webfont.ttf);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'SK Modernist';
-    src: url(../fonts/sk-modernist-bold-webfont.ttf);
-    font-weight: bold;
-}
-
-$sans: "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans: 'Chivo', sans-serif;
 $serif: 'adobe-caslon-pro', serif;
 
 $text-color:       blue;
-$background-color: #f4eddd;
+$background-color: #f5f5fb;
 $brand-color:      #ed562e;
 $dark-color:       #262c3a;
 

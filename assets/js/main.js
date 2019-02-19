@@ -1,19 +1,37 @@
 $(document).ready(function(){
-  $('nav p').on('click', function() {
-    $('nav p').removeClass('selected');
-    $(this).addClass('selected');
-    
-    $('.show').removeClass('show');
-    $('.' + this.innerText).addClass('show');
-  })
-  
-  $('.work a').on('mouseenter', function(e) {
-    var id = this.dataset.img;
-    $('#' + id)
-      .css('display', 'block')
-      .css('left', e.clientX + 'px')
-      .css('top', e.clientY + 'px');
-  }).on('mouseleave', function() {
-    $('.portfolio-img').css('display', 'none');
+  let $imageContainer = $('#image-container');
+  let $imageLinks = $('.image-link');
+
+  $imageLinks.on('mouseenter', (e) => {
+    let videoURL = e.target.dataset.image;
+    console.log(videoURL);
+
+    $imageContainer.empty();
+
+    let video = document.createElement('video');
+    let $video = $(video);
+    $video.attr('src', `assets/img/${videoURL}`);
+    $video.attr('autoplay', true);
+    $video.attr('loop', true);
+    $video.attr('playslinline', true);
+
+    $imageContainer.append($video);
+
+    $imageContainer.css({
+      left: e.clientX + 'px',
+      top: e.clientY + 'px'
+    })
+    $imageContainer.addClass('visible');
+  });
+
+  $imageLinks.on('mousemove', (e) => {
+    $imageContainer.css({
+      left: e.clientX + 'px',
+      top: e.clientY + 'px'
+    })
+  });
+
+  $imageLinks.on('mouseleave', () => {
+    $imageContainer.removeClass('visible');
   })
 })
