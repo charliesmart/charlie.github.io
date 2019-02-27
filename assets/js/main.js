@@ -4,7 +4,6 @@ $(document).ready(function(){
 
   $imageLinks.on('mouseenter', (e) => {
     let videoURL = e.target.dataset.image;
-    console.log(videoURL);
 
     $imageContainer.empty();
 
