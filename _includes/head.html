@@ -10,6 +10,15 @@
   <script src="/assets/js/main.js"></script>
 
   <title> &nbsp; Charlie Smart</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135268334-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135268334-1');
+  </script>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="https://use.typekit.net/mys0val.css">
   <link href="https://fonts.googleapis.com/css?family=Chivo:400,700" rel="stylesheet">
