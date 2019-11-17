@@ -1,0 +1,110 @@
+I"�<p>Collaboration between independent artists is a central component of much of today’s hip hop music. Rooted in the call-and-response traditions of West Africa and 1970s Bronx block party culture, hip hop has always had a strong group focus. I set out to visualize 25 years’ worth of hip hop collaborations and determine how the shape of the resulting social network has changed over time.</p>
+
+<!--more-->
+
+<h2 id="getting-the-data">getting the data</h2>
+
+<p>First, I needed a fairly comprehensive list of hip hop musicians. Fortunately, Wikipedia maintains a <a href="https://en.wikipedia.org/wiki/List_of_hip_hop_musicians">list</a> of about about 1,100 who have been, “important to the genre.” I figured that was better than trying to compile a list based on my limited knowledge of the genre, so I used the Chrome extension “Web Scraper” to quickly comb through the list and grab all the names.</p>
+
+<p>Next, I needed to find some way to quantify the strength of relationships between artists. I decided to use data from Spotify’s API. Using the API, it is possible to access data on all of the streaming service’s 30 million songs, including the date of release, popularity, and, most importantly for my purposes, artists featured on the song.</p>
+
+<p>I wrote a Python script that loops through my list of artists and for each artist does the following:</p>
+
+<ul>
+  <li>Gets all albums for that artist</li>
+  <li>Checks a list of albums against a set of keywords like “remix” and “radio edit” to remove duplicates</li>
+  <li>Gets all songs on each album</li>
+  <li>Checks for featured artists on all songs</li>
+  <li>Adds or updates an entry in a relationships dictionary for the relationship between the featured artist and the main album artist. Each entry has a “source”, “target” and “value”, where the value is the number of times those two artists collaborated. Since the relationships are not directional, it does not matter which artist is the source and which is the target, and the script ensures there are no mirroring entries.</li>
+</ul>
+
+<p>I wrote a second python script to split the data up into categories by year. I split all of the resulting ~64,000 collaborations into five categories, divided every five years beginning in 1990 and ending in 2015. Finally, I exported everything to CSVs.</p>
+
+<h2 id="visualization">visualization</h2>
+
+<p>I used the network visualization program Gephi to create network graphs from my data. I applied the “Force Atlas 2” layout, which essentially treats each artist, or node, as a magnet repelling all other nodes and treats each edge, or relationship, as rubber band pulling related artists together.</p>
+
+<p>I then sized the nodes based on the number of connections they had to other nodes and colored the nodes based on “modularity classes”, which are algorithmically-generated naturally-forming groups based on the connections of nodes.</p>
+
+<p>Without further ado, here are the visualizations for each year.</p>
+
+<p>1990 - 1995:</p>
+
+<p><img src="/assets/img/hiphop/1990_1995.png" alt="1990-1994" /></p>
+
+<p>1995 - 2000:</p>
+
+<p><img src="/assets/img/hiphop/1995_2000.png" alt="1995-2000" /></p>
+
+<p>2000 - 2005:</p>
+
+<p><img src="/assets/img/hiphop/2000_2005.png" alt="2000-2005" /></p>
+
+<p>2005 - 2010:</p>
+
+<p><img src="/assets/img/hiphop/2005_2010.png" alt="2005-2010" /></p>
+
+<p>2010 - 2015:</p>
+
+<p><img src="/assets/img/hiphop/2010_2015.png" alt="2010-2015" /></p>
+
+<h2 id="analysis">analysis</h2>
+
+<p>The first, and perhaps most obvious, trend is the general increase in collaboration over time. When the number of unweighted edges (i.e. multiple collaborations between two artists only counts as one relationship) is divided by the number of nodes for each year, that trend becomes clear. In 1990-1995, the ration of edges to nodes was 0.979. In 2010-2015 it was 11.36. Even as recently as 2005-2010, the ration was only 3.98, so there has been a large jump in the past half-decade.</p>
+
+<p>Another measure of the number of relationships is the average path length. This represents the average number of nodes that must be passed through to connect any two nodes in the graph. A lower number indicates more connections resulting in more possible routes. In 1995-2000, the average path length was 4.422 nodes. In 2010-2015, it was 2.866. I left out 1990-1995 for this measure, since it had so few nodes compared to other years which seriously affects this particular measure.</p>
+
+<p>Finally, I calculated the “betweenness centrality” for each node in each year group. This measures the number of shortest paths between any two nodes that passes through that node. If a node often lies on the shortest path between two other nodes, that is a good indicator that it is central to the network. The top results for each year are:</p>
+
+<p><strong>1990-1995</strong></p>
+
+<ol>
+  <li>Lord Finesse</li>
+  <li>The Notorious B.I.G.</li>
+  <li>Fat Joe</li>
+  <li>CL Smooth</li>
+  <li>Ice Cube</li>
+</ol>
+
+<p><strong>1995-2000</strong></p>
+
+<ol>
+  <li>Foxy Brown</li>
+  <li>Funkmaster Flex</li>
+  <li>Snoop Dogg</li>
+  <li>Juvenile</li>
+  <li>Magnolia Sky</li>
+</ol>
+
+<p><strong>2000-2005</strong></p>
+
+<ol>
+  <li>Sauce Money</li>
+  <li>Snoop Dogg</li>
+  <li>Scram Jones</li>
+  <li>Lil Jon</li>
+  <li>Kurupt</li>
+</ol>
+
+<p><strong>2005-2010</strong></p>
+
+<ol>
+  <li>Snoop Dogg</li>
+  <li>Soulja Slim</li>
+  <li>Rahzel</li>
+  <li>Kurupt</li>
+  <li>Talib Kweli</li>
+</ol>
+
+<p><strong>2010-2015</strong></p>
+
+<ol>
+  <li>Snoop Dogg</li>
+  <li>2 Chainz</li>
+  <li>E-40</li>
+  <li>Honey Cocaine</li>
+  <li>Bun B</li>
+</ol>
+
+<p>Since the mid-1990s, Snoop Dogg has dominated this centrality measure, with other artists popping in for 5-10 years before fading out.</p>
+:ET
